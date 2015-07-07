@@ -42,7 +42,7 @@ function objToQuery(obj) {
 function makeMethod(url, schema, path, method, auth) {
   var endpoint = url + path;
   if(schema.basePath){
-    enpoint += url + schema.basePath + path;
+    endpoint += url + schema.basePath + path;
   }
   return function(args) {
     var query = args ? objToQuery(args) : "";
